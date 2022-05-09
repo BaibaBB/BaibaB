@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reakcijas laiks</title>
+</head>
+<body>
+    <h1>Cik ātrs tu esi!</h1>
+    <p>Uzspied uz pirmā attēla, pēc tam, pēc iespējas ātrāk,noklikšķini uz otra attēla, lai noskaidrotu savu reakcijas ātrumu.</p>
+    <p>Tavs laiks:<span id="tavsLaiks">te būs redzams laiks</span></p>
+    <div id="attels" style="position: absolute;"></div>
+    <script>
+        var sakums; //piefiksē sākuma laiku
+        var beigas; //piefiksē beigu laiku
+        var bilde=docoment.getElementById("attēls");
+        var game=false;
+
+        //funkcija kas nejaušā punktā parāda attēlu
+        function paradas(){
+            var top=Math.random()*150; //nejauši izvēlas y koordināti
+            var left=Math.random()*400; //nejauši izvēlas x koordināti
+
+            document.getElementById("attēls").style.top=top+"px";
+            document.getElementById("attēls").style.left=left+"px"; 
+            document.getElementById("attēls").style.backgroundColor="red";
+            
+        }
+
+    </script>
+
+</body>
+</html>
